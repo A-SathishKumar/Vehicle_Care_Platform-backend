@@ -19,7 +19,7 @@ paymentRouter.post("/checkout",async (req,res)=>{
           quantity: item.quantity,
         }
       }),
-      success_url: `${process.env.FE_URL/payment-success`,
+      success_url: `${process.env.FE_URL}/payment-success`,
       cancel_url: `${process.env.FE_URL}/payment-cancel`,
     })
     res.json({ url: session.url })
