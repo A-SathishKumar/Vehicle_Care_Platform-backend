@@ -19,8 +19,8 @@ paymentRouter.post("/checkout",async (req,res)=>{
           quantity: item.quantity,
         }
       }),
-      success_url: 'https://vehiclescareplatform.netlify.app/payment-success',
-      cancel_url: `${process.env.FE_URL}payment-cancel`,
+      success_url: `${process.env.FE_URL/payment-success`,
+      cancel_url: `${process.env.FE_URL}/payment-cancel`,
     })
     res.json({ url: session.url })
   } catch (e) {
